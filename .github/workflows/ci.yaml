@@ -7,6 +7,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest,windows-latest,macos-latest]
+        version: ['3.9','3.10']
 
     steps:
       - name: code checkout
@@ -14,7 +15,7 @@ jobs:
       - name: setup python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.9'
+          python-version: ${{ matrix.version}}
       - name: install flake8
         run: |
           python -m pip install --upgrade pip
