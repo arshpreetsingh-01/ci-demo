@@ -7,7 +7,7 @@ def subtract(a, b):
 
 
 def mul(a, b):
-    return a* b
+    return a * b
 
 
 result1 = add(4, 5)
